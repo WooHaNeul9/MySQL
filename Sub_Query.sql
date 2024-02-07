@@ -17,5 +17,3 @@ FROM (
     WHERE department_code IS NULL
 ) AS SQ
 WHERE employee_name = '홍길동';
-
-

@@ -43,5 +43,3 @@ SELECT observe_date, AVG(speed_80m) AS avg
 FROM jeju2 
 WHERE speed_80m > 5.5
 GROUP BY observe_date;
-
-
