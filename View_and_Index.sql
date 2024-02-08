@@ -1,6 +1,6 @@
 USE practice_sql;
 
-# View : 논리 적으로만 존재하는 읽기 전용의 가상의 테이블
+# View : 논리적으로만 존재하는 읽기 전용의 가상의 테이블
 -- 제한된 보기를 제공할 때, 특정 쿼리문(SELECT)을 미리 작성해두는 용도
 
 CREATE VIEW employee_view AS 
