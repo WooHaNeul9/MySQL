@@ -35,6 +35,7 @@ CREATE TABLE example_table (
 
 -- 사용자 생성
 -- CREATE USER '사용자명'@'접속IP' IDENTIFIED BY '비밀번호';
+
 CREATE USER 'developer'@'127.0.0.1' IDENTIFIED BY '648200';
 
 -- 생성된 사용자 보기
