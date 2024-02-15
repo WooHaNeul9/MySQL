@@ -89,7 +89,7 @@ SELECT * FROM jeju WHERE speed_80m > 4 XOR direction_50m < 180; -- 합집합에�
 -- _ : 임의의 한 개 문자
 SELECT * FROM jeju WHERE observe_date LIKE '20%';
 SELECT * FROM jeju WHERE observe_date LIKE '%08';
-SELECT * FROM jeju WHERE observe_date LIKE '%08%'; -- 08을 포함만 모든 글자를 출력함
+SELECT * FROM jeju WHERE observe_date LIKE '%08%'; -- 08을 포함한 모든 글자를 출력함
 SELECT * FROM jeju WHERE observe_date LIKE '20_'; -- 20이 포함된 3글자 출력
 SELECT * FROM jeju WHERE observe_date LIKE '2023-__-08';
 
