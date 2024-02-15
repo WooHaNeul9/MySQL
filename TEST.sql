@@ -56,22 +56,28 @@ CREATE TABLE search_log (
    relation TINYINT NOT NULL
 );
 
+-- 1번
 INSERT INTO user (email, password, nickname, tel_number, address, address_detail, agreed_personal) VALUES ('email@email.com', 'P!sswOrd', 'rose', '010-1234-5678', '부산광역시 사하구', '낙동대로', true);
 
+-- 2번
 UPDATE user 
 SET profile_image = 'https://cdn.onews.tv/news/photo/202103/62559_62563_456.jpg'
 WHERE email = 'email@email.com';
 
+-- 3번
 INSERT INTO board (title, contents, writer_email) VALUES ('첫번째 게시물' , '반갑습니다. 처음뵙겠습니다.', 'email2@email.com');
 
+-- 4번
 INSERT INTO board (title, contents, writer_email) VALUES ('첫번째 게시물' , '반갑습니다. 처음뵙겠습니다.', 'email@email.com');
-select * from board;
 
+-- 5번
 INSERT INTO board_image (board_number, image_url) VALUES (1, 'https://image.van-go.co.kr/place_main/2022/04/04/12217/035e1737735049018a2ed2964dda596c_750S.jpg');
 
+-- 6번
 INSERT INTO board (user_email, post_id)
 VALUES ('email@email.com', 1);
 
+-- 7번
 SELECT 
     B.board_number,
     B.title,
@@ -85,6 +91,7 @@ SELECT
     U.nickname AS writer_nickname
 FROM user AS U INNER JOIN board AS B;
 
+-- 8번
 CREATE VIEW board_view AS 
 SELECT 
     B.board_number,
@@ -99,10 +106,10 @@ SELECT
     U.nickname AS writer_nickname
 FROM user AS U INNER JOIN board AS B;
 
-select * from board_view;
-
+-- 9번
 SELECT * FROM board_view WHERE title LIKE '%반갑%';
 SELECT * FROM board_view WHERE contents  LIKE '%반갑%';
 
+-- 10번
 CREATE INDEX board_title_idx
 ON board (title);
